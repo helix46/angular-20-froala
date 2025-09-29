@@ -18,9 +18,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -30,7 +28,18 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/froala-editor/css/froala_editor.pkgd.min.css",
+              "./node_modules/froala-editor/css/froala_style.min.css",
+              "node_modules/froala-editor/css/plugins/char_counter.css",
+              "node_modules/froala-editor/css/plugins/colors.min.css",
+              "node_modules/froala-editor/css/plugins/draggable.css",
+              "node_modules/froala-editor/css/plugins/emoticons.css",
+              "node_modules/froala-editor/css/plugins/help.min.css",
+              "node_modules/froala-editor/css/plugins/image.min.css",
+              "node_modules/froala-editor/css/plugins/line_breaker.min.css",
+              "node_modules/froala-editor/css/plugins/quick_insert.min.css",
+              "node_modules/froala-editor/css/plugins/table.min.css"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -80,10 +89,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -92,9 +98,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "styles": ["src/styles.scss"]
           }
         }
       }
